@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a00c9, #b133ff);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    overflow: hidden;
+}
+
+
+body::before, body::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+body::before {
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+body::after {
+    bottom: 10%;
+    right: 20%;
+    transform: translate(50%, 50%);
+}
+
+h1 {
+    text-align: center; 
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-right: 0;     
+    margin-top: 100px;   
+}
+
+.formularioContato {
+    background-color: #f0eaff;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    border: none;
+    text-align: center; 
+    transition: transform 0.2s;
+    z-index: 1; 
+}
+
+.formularioContato:hover {
+    transform: translateY(-5px);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #6a00c9;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 90%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 15px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #6a00c9;
+    box-shadow: 0 0 8px rgba(106, 0, 201, 0.5);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-envia {
+    background-color: #6a00c9;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 90%;
+    font-weight: bold;
+}
+
+.btn-envia:hover {
+    background-color: #5a00b0;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .formularioContato {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
