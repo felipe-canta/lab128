@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.EMAIL_USER, 
+        user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
     },
 });
@@ -36,14 +36,14 @@ app.post('/enviar-email', (req, res) => {
     }
 
     transporter.sendMail({
-        from: process.env.EMAIL_USER, 
-        to: process.env.EMAIL_USER, 
+        from: email,
+        to: process.env.EMAIL_USER,
         subject: 'Nova mensagem do formulário de contato',
         text: `Nome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}`,
     })
-    
     .then(() => {
-        res.status(200).json({ message: 'E-mail enviado com sucesso!' });
+        console.log('E-mail enviado com sucesso!');
+        res.redirect('/'); // Redireciona de volta para o formulário
     })
     .catch(error => {
         console.error('Erro ao enviar e-mail:', error.message);
