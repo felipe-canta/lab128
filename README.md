@@ -3,8 +3,8 @@ Utilizamos o "Styles.css" para estilizar a aparência do forms e o javascript(js
 Além disso, acoplamos uma maneira de caso o usuário digite alguma coisa errada, por exemplo o email, o site mostra uma mensagem de erro e pede à pessoa que ela reescreva da forma correta.
 -------------------------------------------
 INTEGRANTES DO GRUPO:
-CAUAN BRAGA FIGUEIREDO
-FELIPE CANTARIN GUGLIELMINETTI
-RAMON BATISTA SOARES
-GUILHERME DIAS CAVALHIERI
+CAUAN BRAGA FIGUEIREDO //
+FELIPE CANTARIN GUGLIELMINETTI //
+RAMON BATISTA SOARES // 
+GUILHERME DIAS CAVALHIERI //
 -------------------------------------------
